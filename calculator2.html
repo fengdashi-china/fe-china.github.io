@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>缝大师</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/w3.css">
+    <style>tr:nth-child(even) {background-color: #f2f2f2;}</style>
+</head>
+
+<body>
+    <h3>缝大师AA级材料</h3>
+    <h3>美缝价格计算器</h3>
+    <table class="w3-table">            
+        <tr>
+            <th>瓷砖规格</th>
+            <th>瓷砖用量（片）</th>
+        </tr>
+        <tr>
+            <td>规格800*800</td>
+            <td><input id="t8080" onkeyup=update() onclick=update() type="number" value="0"></td>
+        </tr>
+        <tr>
+            <td>规格400*800</td>
+            <td><input id="t4080" onkeyup=update() onclick=update() type="number" value="0"></td>
+        </tr>
+        <tr>
+            <td>规格600*600</td>
+            <td><input id="t6060" onkeyup=update() onclick=update() type="number" value="0"></td>
+        </tr>
+        <tr>
+            <td>规格300*600</td>
+            <td><input id="t3060" onkeyup=update() onclick=update() type="number" value="0"></td>
+        </tr>
+        <tr>
+            <td>规格500*500</td>
+            <td><input id="t5050" onkeyup=update() onclick=update() type="number" value="0"></td>
+        </tr>
+        <tr>
+            <td>规格400*400</td>
+            <td><input id="t4040" onkeyup=update() onclick=update() type="number" value="0"></td>
+        </tr>
+        <tr>
+            <td>规格300*300</td>
+            <td><input id="t3030" onkeyup=update() onclick=update() type="number" value="0"></td>
+        </tr>
+        <tr>
+            <td>规格900*900</td>
+            <td><input id="t9090" onkeyup=update() onclick=update() type="number" value="0"></td>
+        </tr>
+        <tr>
+            <td>规格450*900</td>
+            <td><input id="t4590" onkeyup=update() onclick=update() type="number" value="0"></td>
+        </tr>
+        <tr>
+            <td>总价</td>
+            <td id="price">
+                0元
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">其他非常规规格请与我们联系。</th>
+        </tr>
+    </table>
+    <script>
+        function update() {
+            var v8080 = document.getElementById("t8080").value;
+            var v4080 = document.getElementById("t4080").value;
+            var v6060 = document.getElementById("t6060").value;
+            var v3060 = document.getElementById("t3060").value;
+            var v5050 = document.getElementById("t5050").value;
+            var v4040 = document.getElementById("t4040").value;
+            var v3030 = document.getElementById("t3030").value;
+            var v9090 = document.getElementById("t9090").value;
+            var v4590 = document.getElementById("t4590").value;            
+            var price = 
+                v8080 * 88 +
+                v4080 * 48 +
+                v6060 * 66 +
+                v3060 * 36 +
+                v5050 * 55 +
+                v4040 * 44 +
+                v3030 * 33 +
+                v9090 * 99 +
+                v4590 * 54;
+            document.getElementById("price").innerHTML = price + "元";
+        }
+    </script>
+
+</body>
+
+</html>
